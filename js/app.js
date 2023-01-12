@@ -25,8 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let i_video = 0;
 
-    
-    
+
+
     if (this.documentElement.clientWidth < 750) {
 
         video.innerHTML =
@@ -35,8 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const video__item = document.getElementsByTagName("video");
 
-        setInterval(()=>{
-            if((video__item[0].currentTime < 9.7 && video__item[0].currentTime>9.2) || (video__item[0].currentTime < 19.7 && video__item[0].currentTime>19.2) || (video__item[0].currentTime < 29.7 && video__item[0].currentTime>29.2)){
+        setInterval(() => {
+            if ((video__item[0].currentTime < 9.7 && video__item[0].currentTime > 9.2) 
+            || (video__item[0].currentTime < 19.7 && video__item[0].currentTime > 19.2) 
+            || (video__item[0].currentTime < 29.7 && video__item[0].currentTime > 29.2)) {
                 ++i_video;
                 sub_video_block.innerHTML = `Рішення для <span class="blue__text solution__for">${sup__video[i_video]}</span>
                                         <div class="animation__title"></div>`
@@ -44,23 +46,23 @@ document.addEventListener("DOMContentLoaded", function () {
                     const animation__title = document.querySelector('.animation__title');
                     animation__title.classList.add("active");
                 }, 500)
-        
+
                 setTimeout(() => {
                     const animation__title = document.querySelector('.animation__title');
                     animation__title.classList.remove("active");
                 }, 9200)
             }
-    
+
             if (i_video == 2) {
                 i_video = -1;
             }
         }, 500)
-    } else{
+    } else {
         setInterval(() => {
             ++i_video;
             sub_video_block.innerHTML = `Рішення для <span class="blue__text solution__for">${sup__video[i_video]}</span>
                                         <div class="animation__title"></div>`
-    
+
             if (this.documentElement.clientWidth > 750) {
                 video.innerHTML =
                     `<video muted autoplay loop>
@@ -68,33 +70,32 @@ document.addEventListener("DOMContentLoaded", function () {
                         <source src="${mas_video[i_video]}" type="video/mp4">
                     </video>`
             }
-    
+
             setTimeout(() => {
                 const animation__title = document.querySelector('.animation__title');
                 animation__title.classList.add("active");
             }, 300)
-    
+
             setTimeout(() => {
                 const animation__title = document.querySelector('.animation__title');
                 animation__title.classList.remove("active");
             }, 9000)
-    
-    
+
+
             if (i_video == 2) {
                 i_video = -1;
             }
         }, 10000)
     }
 
+
     window.addEventListener("click", (e) => {
-        if (e.target.classList.contains("description__block") || e.target.parentElement.classList.contains("description__block") || e.target.parentElement.parentElement.parentElement.classList.contains("description__block")) {
-            if (e.target.className === "description__block") {
-                e.target.classList.toggle("active");
-            } else if (e.target.parentElement.classList.contains("description__block")) {
-                e.target.parentElement.classList.toggle("active");
-            } else {
-                e.target.parentElement.parentElement.parentElement.classList.toggle("active");
-            }
+
+        console.log(e.target.previousElementSibling)
+        console.log(e.target.classList.contains("open__close"))
+        if (e.target.classList.contains("open__close")) {
+            e.target.parentElement.classList.toggle("active");
+            e.target.previousElementSibling.classList.toggle("active");
         }
     })
 

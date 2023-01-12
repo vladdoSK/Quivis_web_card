@@ -37,7 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const video__item = document.getElementsByTagName("video");
 
         setInterval(()=>{
-            if((video__item[0].currentTime < 9.7 && video__item[0].currentTime>9.2) || (video__item[0].currentTime < 19.7 && video__item[0].currentTime>19.2) || (video__item[0].currentTime < 29.7 && video__item[0].currentTime>29.2)){
+            if((video__item[0].currentTime < 9.7 && video__item[0].currentTime>9.2) 
+            || (video__item[0].currentTime < 19.7 && video__item[0].currentTime>19.2) 
+            || (video__item[0].currentTime < 29.7 && video__item[0].currentTime>29.2)){
                 ++i_video;
                 sub_video_block.innerHTML = `Solution for <span class="blue__text solution__for">${sup__video[i_video]}</span>
                                         <div class="animation__title"></div>`

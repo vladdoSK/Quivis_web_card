@@ -90,14 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     window.addEventListener("touchstart", (e) => {
-
-        const description__block = document.querySelectorAll('.description__block');
         if (e.target.classList.contains("open__close")) {
-            e.target.parentElement.classList.toggle("active");
-        } else{
-            for(let i=0; i<description__block.length; i++){
-                description__block[i].classList.remove("active");
-            }
+            e.target.parentElement.classList.add("active");
         }
     })
 

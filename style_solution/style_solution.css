@@ -1,0 +1,144 @@
+body,html{
+    height: 100%;
+    padding-right: 8px;
+}
+
+.logo img{
+    cursor: pointer;
+}
+
+.block__content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.title__section{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.img__content{
+    width: 50%;
+    position: relative;
+    border-right: 2px solid white;
+
+}
+
+.img__content img{
+    width: 95%;
+    box-shadow: 3px 3px 5px rgb(54, 51, 51);
+}
+
+.description__content{
+    width: 50%;
+    margin-left: 30px;
+}
+
+.img__content::after{
+    content: "";
+    width: 95%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    background: rgb(12, 23, 129);
+    opacity: .3;
+}
+
+
+/*------------------------------------*/
+/*------------FOOTER------------------*/
+/*------------------------------------*/
+
+footer{
+    width: 100%;
+}
+
+.footer__down{
+    position: relative;
+    background: linear-gradient(to bottom right, rgb(35, 35, 36), rgb(44, 44, 44));
+}
+
+@media (max-width:1400px){
+    .img__content::after{
+        height: 75%;
+    }
+}
+
+@media (max-width:1200px){
+    .block__content{
+        flex-direction: column;
+    }
+
+    .img__content{
+        width: 100%;
+        border-right: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+        border-bottom: 2px solid white;
+        padding-bottom: 50px;
+    }
+
+    .img__content::after{
+        content: "";
+        width: 70%;
+        height: 90%;
+        top:0;
+        left: 15%;
+        position: absolute;
+        background: rgb(12, 23, 129);
+        opacity: .3;
+    }
+
+    .img__content img{
+        width: 70%;
+    }
+
+    .description__content{
+        width: 100%;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 800px){
+    .description__content{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 650px){
+    .description__content{
+        font-size: 14px;
+    }
+
+    .img__content img{
+        width: 100%;
+    }
+
+    .img__content::after{
+        content: "";
+        width: 100%;
+        height: 88%;
+        top:0;
+        left: 0%;
+        position: absolute;
+        background: rgb(12, 23, 129);
+        opacity: .3;
+    }
+}
+
+@media (max-width: 500px){
+    body, html{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

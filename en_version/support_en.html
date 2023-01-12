@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo_quivis_blue.svg" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style_main/style.css">
+    <link rel="stylesheet" href="../style_solution/style_solution.css">
+    <link rel="stylesheet" href="../style_support/style_support.css">
+    <title>Quivis</title>
+</head>
+
+<body>
+    <div class="opacity__block"></div>
+    <div class="loading__img"></div>
+
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="block__header">
+                    <a class="logo" href="./main_en.html">
+                        <img src="../images/logo_quivis_blue.svg">
+                    </a>
+    
+                    <div class="slogan">
+                        Your <span class="blue__text">Video Analyst</span>
+                    </div>
+    
+                    <div class="navigation">
+                        <div class="navigation__item">Solution for
+                            <div class="arrow"></div>
+                            <div class="solution">
+                                <a class="solution__item" href="./security_en.html">Security</a>
+                                <a class="solution__item" href="./parking_en.html">For restricted areas</a>
+                                <a class="solution__item" href="./analize_en.html">Traffic analysts</a>
+                            </div>
+                        </div>
+                        <a class="navigation__item" href="./product_en.html">Product</a>
+                        <a class="navigation__item" href="./support_en.html">Support</a>
+                    </div>
+
+                    <div class="navigation__mob">
+                        <div class="navigation__item_mob">Solution for
+                            <div class="arrow__mob"></div>
+                            <div class="solution__mob">
+                                <a class="solution__item" href="./page_project/security.html">Security</a>
+                                <a class="solution__item" href="./page_project/parking.html">For restricted areas</a>
+                                <a class="solution__item" href="./page_project/analize.html">Traffic analysts</a>
+                            </div>
+                        </div>
+                        <a class="navigation__item_mob" href="./page_project/product.html">Product</a>
+                        <a class="navigation__item_mob" href="./page_project/support.html">Support</a>
+                    
+                        <div class="language__mob">
+                            <div class="current_lang">
+                                Language
+                                <div class="arrow__mob arrow__mob_lan"></div>
+                                <div class="version_lan_mob">
+                                    <a class="lan__item" href="../page_project/support.html">
+                                        <img src="../images/ua.png" />
+                                        UA
+                                    </a>
+                                    <a class="lan__item">
+                                        <img src="../images/EN.png" />
+                                        EN
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+    
+                    <div class="stand__with">
+                        <img src="../images/ukraine.png" />
+                    </div>
+    
+                    <div class="language">
+                        <div class="current_lang">
+                            EN
+                            <div class="arrow"></div>
+                            <div class="version_lan">
+                                <a class="lan__item" href="../main.html">
+                                    <img src="../images/ua.png" />
+                                    UA
+                                </a>
+                                <a class="lan__item">
+                                    <img src="../images/EN.png" />
+                                    EN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="burger">
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    
+        <main>
+            <div class="container">
+                <h1 class="title__section">Ask us a question</h1>
+    
+                <p class="support__text">Do you have a question? Fill in the form and send it to us. We will contact you shortly
+                    <br> Or call a number: +38 (044) 422-55-33
+                </p>
+                <div class="form">
+                    <form action="#" id="form" class="form__body">
+                        <div class="form__item">
+                            <label for="formName" class="form__label">Name</label>
+                            <input type="text" name="name" id="formName" class="form__input _req">
+                        </div>
+    
+                        <div class="form__item">
+                            <label for="formPhone" class="form__label">Phone number:</label>
+                            <input type="text" name="email" id="formPhone" class="form__input _req _phone">
+                        </div>
+    
+                        <div class="form__item">
+                            <label for="formEmail" class="form__label">Email:</label>
+                            <input type="text" name="email" id="formEmail" class="form__input _req _email">
+                        </div>
+    
+                        <div class="form__item">
+                            <label for="formMessage" class="form__label">Message:</label>
+                            <textarea name="message" id="formMessage" class="form__input"></textarea>
+                        </div>
+    
+                        <div class="form__item">
+                            <div class="checkbox">
+                                <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input _req">
+                                <label for="formAgreement" class="checkbox__label">I agree to the processing of personal data</label>
+                            </div>
+                        </div>
+    
+                        <button type="submit" class="form__button">Send</button>
+    
+                        <div class="error__message">Incorrectly entered data or empty field</div>
+                    </form>
+                </div>
+    
+            </div>
+        </main>
+    
+    
+        <footer>
+            <div class="footer__down">
+                <div class="container">
+                    <div class="block__footer">
+                        <div class="footer__text">@QUIVIS 2023. All rights reserved.</div>
+    
+                        <div class="logo__footer">
+                            <img src="../images/logo_quivis_blue.svg" />
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+    <script src="../js/header.js"></script>
+    <script src="../js/suport.js"></script>
+</body>
+
+</html>

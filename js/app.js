@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("touchstart", (e) => {
         console.log(e.target.classList.contains("open__close"))
         if (e.target.classList.contains("open__close")) {
-            e.target.parentElement.classList.toggle("active");
+            e.target.parentElement.classList.add("active");
         }
     })
 
